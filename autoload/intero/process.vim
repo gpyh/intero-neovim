@@ -113,7 +113,7 @@ function! s:start_buffer(height)
     " Starts an Intero REPL in a split below the current buffer. Returns the
     " ID of the buffer.
     exe 'below ' . a:height . ' split'
-    terminal! stack ghci --with-ghc intero
+    terminal! stack ghci --ghci-options -XNoImplicitPrelude --with-ghc intero
     set bufhidden=hide
     set noswapfile
     set hidden
